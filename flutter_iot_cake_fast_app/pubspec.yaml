@@ -1,0 +1,41 @@
+name: flutter_iot_cake_fast_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_map: ^8.2.2 #ใช้สำหรับเเสดงเเผยที่
+  font_awesome_flutter: ^10.12.0 #ใช้งานไอคอนจากเว็บ FontAwesome.com
+  google_fonts: ^8.0.1 #ใช้งานฟอนต์จาก fonts.google.com
+  carousel_slider: ^5.1.2 #ใช้สำหรับสร้าง Slider
+  latlong2: ^0.9.1 #ใช้สำหรับจัดการพิกัดบนเเผยที่
+  url_launcher: ^6.3.2 #ใช้สำหรับเปิดลิงก์ภายนอก เช่น เปิดเเผนที่ในเเอป เปิดบราวเซอณื หรือโทรศัพท์
+
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+  icons_launcher: ^3.0.3 #ใช้สำหรับจัดการไอคอนในแอปจากไฟส์ภาพ
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
+icons_launcher:
+  image_path: "assets/icon/icon.png"
+  platforms:
+    android:
+      enable: true
+    ios:
+      enable: true
+
+ 
+
