@@ -1,3 +1,5 @@
+// ignore_for_file: must_call_super
+
 import 'package:flutter/material.dart';
 import 'package:flutter_iot_cake_fast_app/views/cake_shop_list_ui.dart';
 
@@ -10,59 +12,55 @@ class SplashScreenUi extends StatefulWidget {
 
 class _SplashScreenUiState extends State<SplashScreenUi> {
   @override
-  void initState() {
+  void initState(){
     Future.delayed(
       Duration(seconds: 3),
-      () {
+      (){
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => CakeShopListUi(),
+            builder: (context) => CakShoopListUi(),
           ),
-        );
-      },
+          );
+      }
     );
-
-    super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/images/bg_welcome.png"),
-              fit: BoxFit.fill),
+            image: AssetImage("assets/images/bg_welcome.png"),
+            fit: BoxFit.cover,
+        ),
         ),
         child: Center(
           child: Column(
             children: [
+              SizedBox(height: 100,),
               Text(
-                'dime',
+                'เค้กผมอร่อยที่สุด',
                 style: TextStyle(
-                  fontSize: 50,
+                  fontSize: 35,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: const Color.fromARGB(255,238,0,0)
                 ),
               ),
-              SizedBox(
-                height: 5,
-              ),
+                SizedBox(height: 5,),
               Text(
-                'cake max',
+                'CAKE CALL FAST',
                 style: TextStyle(
-                  fontSize: 50,
+                  fontSize: 22,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: const Color.fromARGB(255,238,0,0)
                 ),
               ),
-              SizedBox(
-                height: 5,
-              ),
+              SizedBox(height: 180),
               CircularProgressIndicator(
-                color: Colors.red,
+                color: const Color.fromARGB(255,51,0,0)
               ),
+              
             ],
           ),
         ),

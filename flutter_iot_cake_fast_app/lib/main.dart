@@ -4,11 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(
-   FlutterIotCakeFastApp(),
+    FlutterIotCakeFastApp(),
   );
 }
-
-//--------------------
 
 class FlutterIotCakeFastApp extends StatefulWidget {
   const FlutterIotCakeFastApp({super.key});
@@ -28,6 +26,7 @@ class _FlutterIotCakeFastAppState extends State<FlutterIotCakeFastApp> {
           Theme.of(context).textTheme,
         ),
       ),
+
     );
   }
 }

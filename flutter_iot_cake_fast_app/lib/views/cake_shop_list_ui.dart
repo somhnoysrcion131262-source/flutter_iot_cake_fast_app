@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_iot_cake_fast_app/models/cake_shop.dart';
 import 'package:flutter_iot_cake_fast_app/views/cake_shop_detail_ui.dart';
 
-class CakeShopListUi extends StatefulWidget {
-  const CakeShopListUi({super.key});
+class CakShoopListUi extends StatefulWidget {
+  const CakShoopListUi({super.key});
 
   @override
-  State<CakeShopListUi> createState() => _CakeShopListUiState();
+  State<CakShoopListUi> createState() => _CakShoopListUiState();
 }
 
-class _CakeShopListUiState extends State<CakeShopListUi> {
-  //สร้างตัวแปรสําหรับเก็บรูปที่จะเอาไปเเสดงที่ CarouselSlider
-  List<String> imagCakesShop = [
+class _CakShoopListUiState extends State<CakShoopListUi> {
+  //สร้างตัวแปรเก็บรูปที่จะเอาไปแสดงที่ CarouselSlider
+  List<String> imgCakeShop = [
     'assets/images/ck01.png',
     'assets/images/ck02.png',
     'assets/images/ck03.png',
@@ -22,7 +22,6 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
     'assets/images/ck07.png',
   ];
 
-  //สร้างข้อมูลเก็บข้อมูลร้านเค็ก
   List<CakeShop> cakeShops = [
     CakeShop(
       name: 'Yellow Spoon Pastry',
@@ -76,8 +75,7 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
       image1: 's41.jpg',
       image2: 's42.jpg',
       image3: 's43.jpg',
-      description:
-          'คิดถึงเค้กช็อกโกแลต ต้องนึกถึง Larna House เพราะร้านนี้มีจุดเด่นอยู่ที่เค้กช็อกโกแลตสุดเข้มข้นสูตรต้นตำรับจากสิงคโปร์ ที่คัดสรรวัตถุดิบหลักอย่างโกโก้จากแหล่งผลิตชั้นยอด ผสานการใส่ใจทุกขั้นตอนและประสบการณ์ของทางร้านกว่า 20 ปีในการสร้างสรรค์เค้กวันเกิด ทำให้ได้เค้กที่มีรสชาติหอม นุ่มละมุน ชุ่มฉ่ำเนื้อช็อกโกแลตทุกคำ',
+      description: 'คิดถึงเค้กช็อกโกแลต ต้องนึกถึง Larna House เพราะร้านนี้มีจุดเด่นอยู่ที่เค้กช็อกโกแลตสุดเข้มข้นสูตรต้นตำรับจากสิงคโปร์ ที่คัดสรรวัตถุดิบหลักอย่างโกโก้จากแหล่งผลิตชั้นยอด ผสานการใส่ใจทุกขั้นตอนและประสบการณ์ของทางร้านกว่า 20 ปีในการสร้างสรรค์เค้กวันเกิด ทำให้ได้เค้กที่มีรสชาติหอม นุ่มละมุน ชุ่มฉ่ำเนื้อช็อกโกแลตทุกคำ',
       opencloseTime: 'ทุกวัน 09.00-21.00 น.',
       website: 'https://larnahouse.com/',
       facebook: 'https://www.facebook.com/%20larnahouse',
@@ -108,7 +106,8 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
       image3: 's63.jpg',
       description:
           'Coffee bean by dao ร้านเค้กแสนอร่อย ที่สาวกเค้กน้อยคนจะไม่เคยลิ้มลอง ด้วยเมนูเค้กที่มีให้เลือกชิมหลากหลายอย่าง อีกทั้งรสชาติยังถูกปาก ไม่หวานจนเกินไป ราคาต่อชิ้นเริ่มต้นที่ 125 บาทเท่านั้น อาทิ เรนโบว์เค้ก (125 บาท), ช็อกโกแลตมูสเค้ก (140 บาท), เค้กนมสด (150 บาท) และอีกไม่นับถ้วนที่ล้วนแล้วแต่น่ากินสุดๆ',
-      opencloseTime: 'ทุกวัน 10.00-22.00 น.',
+      opencloseTime:
+          'ทุกวัน 10.00-22.00 น.',
       website: 'http://www.coffeebeans.co.th/',
       facebook: 'https://www.facebook.com/CoffeeBeansbyDao',
       latitude: '13.7469267',
@@ -117,12 +116,11 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
     CakeShop(
       name: 'Bake Ministry',
       address: 'สุขุมวิท 26',
-      phone: ' 0891540474',
+      phone: ' 089-154-0474',
       image1: 's71.jpg',
       image2: 's72.jpg',
       image3: 's73.jpg',
-      description:
-          'ร้านเค้กสไตล์โฮมเมดที่เริ่มจาก Made to order ก่อนขยับขยายมาเปิดหน้าร้านที่ซอยสุขุมวิท 26 และคงยังสร้างสรรค์เค้กรสชาติดีในรูปแบบต่างๆ หลากหลายสไตล์ไม่ว่าจะเป็น คัพเค้ก เค้กวันเกิด เค้กแต่งงาน หรือเค้กฉลองครบรอบวันสำคัญต่างๆ รวมถึงเบเกอรี่อื่นๆ อย่างคุกกี้ มาการอง ฯลฯ',
+      description: 'ร้านเค้กสไตล์โฮมเมดที่เริ่มจาก Made to order ก่อนขยับขยายมาเปิดหน้าร้านที่ซอยสุขุมวิท 26 และคงยังสร้างสรรค์เค้กรสชาติดีในรูปแบบต่างๆ หลากหลายสไตล์ไม่ว่าจะเป็น คัพเค้ก เค้กวันเกิด เค้กแต่งงาน หรือเค้กฉลองครบรอบวันสำคัญต่างๆ รวมถึงเบเกอรี่อื่นๆ อย่างคุกกี้ มาการอง ฯลฯ',
       opencloseTime: '10.00-18.00 น. \n(หยุดวันอาทิตย์)',
       website: 'http://www.bakeministry.net/',
       facebook: 'https://www.facebook.com/bakeministry',
@@ -130,13 +128,14 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
       longitude: '100.5705757',
     ),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 177, 11, 11),
+        backgroundColor: const Color.fromARGB(255, 255, 0, 0),
         title: Text(
-          'dime cake max',
+          'Dime',
           style: TextStyle(
             color: Colors.white,
           ),
@@ -147,7 +146,7 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
         child: Column(
           children: [
             CarouselSlider.builder(
-              itemCount: imagCakesShop.length,
+              itemCount: imgCakeShop.length,
               options: CarouselOptions(
                 height: MediaQuery.of(context).size.height * 0.25,
                 autoPlay: true,
@@ -159,10 +158,10 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
                 return Container(
                   margin: const EdgeInsets.all(5.0),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
+                    borderRadius: BorderRadius.circular(5),
                     image: DecorationImage(
-                      image: AssetImage(imagCakesShop[index]),
-                      fit: BoxFit.fill,
+                      image: AssetImage(imgCakeShop[index]),
+                      fit: BoxFit.cover,
                     ),
                   ),
                 );
@@ -170,8 +169,8 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
             ),
             Expanded(
               child: ListView.separated(
-                itemCount: cakeShops.length,
-                separatorBuilder: (context, index) {
+                itemCount: imgCakeShop.length,
+                separatorBuilder:(context, index) {
                   return Divider(
                     color: Colors.red[300],
                   );
@@ -179,18 +178,20 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
                 itemBuilder: (context, index) {
                   return ListTile(
                     onTap: () {
-                      //เปิดไปหน้า cakeShopDetaUi เเบบย้อนกลับได้
+                      //เปิดไปหน้า cakeshopDetailUi แบบย้อนกลับได้
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => CakeShopDetailUi(),
+                          builder: (context) => CakeShopDetailUi(
+                            cakeShopDetail: cakeShops[index],
+                          ),
                         ),
-                      );
+                      ); 
                     },
                     leading: ClipRRect(
                       borderRadius: BorderRadius.circular(5),
                       child: Image.asset(
-                        'assets/images/${cakeShops[index].image1!}',
+                        'assets/images/${cakeShops[index].image1}',
                       ),
                     ),
                     title: Text(
@@ -201,7 +202,7 @@ class _CakeShopListUiState extends State<CakeShopListUi> {
                     ),
                     trailing: Icon(
                       Icons.info,
-                      color: Colors.red[300],
+                      color: Colors.red[700],
                     ),
                   );
                 },
